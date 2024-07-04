@@ -1,0 +1,34 @@
+= Image to ANSI
+
+This is a CLI _thing_ using Python.
+
+== Usage
+
+[source,bash]
+----
+python img_to_ascii.py path {str} [-w {int}] [-a {float}] [-s] [-c] [-b] [-o]
+----
+
+=== Positional Arguments
+
+[cols="1,4", options="header"]
+|===
+| Argument      | Description
+| `path {str}`| path to image
+|===
+
+=== Optional Arguments
+
+[cols="1,4", options="header"]
+|===
+| Option                       | Description
+| `-h, --help`                 | Show this help message and exit
+| `-w, --width {int}`          | Set the character width for the ASCII converted image. [Default: 100]
+| `-a, --aspect_ratio {float}` | Adjust the aspect ratio to account for the height of your font, since characters are not square. [Default: 0.55]
+| `-s, --clearScreen`          | Clear the terminal screen before printing the ASCII image
+| `-c, --colour256`            | Use 256-colour ANSI mode (less vibrant). If not set, use 24-bit colour mode (more vibrant)
+| `-b, --background`           | Add background colours to the pixels, which can sometimes produce unexpected results
+| `-o, --output`               | Generate a .txt file with all the ANSI codes included. Note: The output file can be very large and unoptimized for filesize.
+|===
+
+_By Julian_

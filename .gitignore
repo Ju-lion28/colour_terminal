@@ -1,0 +1,8 @@
+# Local
+.DS_Store
+*.local
+*.log*
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
